@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>This is a fucking WEBSITE</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="thebody">
+	<div class="wrapper">
+
+		<div id="top">
+			<h1>hey, I'm <br>Joe Flasher.</p>
+		</div>
+
+		<hr>
+
+		<p>I build awesome things at <a href="http://istrategylabs.com">iStrategyLabs</a>.</p>
+
+		<ul class="links">
+			<li><a href="mailto:flasher@istrategylabs.com">Email</a></li>
+			<li><a href="http://www.linkedin.com/pub/joe-flasher/8/885/b1b">LinkedIn</a></li>
+			<li><a href="https://twitter.com/joeflasher">Twitter</a></li>
+		</ul>
+
+	</div>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+		setTimeout(function () { 
+			blink(); 
+		}, 2000);
+
+		function blink() {
+		  $('.thebody').css('background-image', 'url(./images/sketch.jpg)');
+		  setTimeout(function () { 
+		  	$('.thebody').css('background-image', 'url(./images/sketch2.jpg)');
+		  }, 500);
+		  setTimeout(function () {
+		  	blink();
+		  }, Math.floor(Math.random()*4000) + 2000);
+		}		
+	</script>
+
+</body>
+</html>
