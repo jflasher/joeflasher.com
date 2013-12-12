@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>This is a fucking WEBSITE</title>
+	<title>Joe Flasher</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body class="thebody">
+	<div id="sketch1" class="sketch"><img src="./images/sketch.png"></div>
+	<div id="sketch2" class="sketch"><img src="./images/sketch2.png"></div>	
+
 	<div class="wrapper">
 
 		<div id="top">
-			<h1>hey, I'm <br>Joe Flasher.</p>
+			<h1>hey, I'm <br/>Joe Flasher.</h1>
 		</div>
 
 		<hr>
@@ -17,23 +20,29 @@
 		<p>I build awesome things at <a href="http://istrategylabs.com">iStrategyLabs</a>.</p>
 
 		<ul class="links">
-			<li><a href="mailto:flasher@istrategylabs.com">Email</a></li>
+			<li><a href="mailto:joe@joeflasher.com">Email</a></li>
 			<li><a href="http://www.linkedin.com/pub/joe-flasher/8/885/b1b">LinkedIn</a></li>
-			<li><a href="https://twitter.com/joeflasher">Twitter</a></li>
-		</ul>
+			<li><a href="https://twitter.com/joseph_flasher">Twitter</a></li>
+		</ul>		
 
 	</div>
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script>
+		var sketch1 = $("#sketch1");
+		var sketch2 = $("#sketch2");
+		sketch1.hide();
+
 		setTimeout(function () { 
 			blink(); 
 		}, 2000);
 
 		function blink() {
-		  $('.thebody').css('background-image', 'url(./images/sketch.jpg)');
+			sketch2.hide();
+		  sketch1.show();
 		  setTimeout(function () { 
-		  	$('.thebody').css('background-image', 'url(./images/sketch2.jpg)');
+		  	sketch2.show();
+		  	sketch1.hide();
 		  }, 500);
 		  setTimeout(function () {
 		  	blink();
