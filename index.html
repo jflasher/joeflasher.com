@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Joe Flasher</title>
+
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+    <style type="text/css">
+        html { 
+            font-family: 'Open Sans', sans-serif;
+            font-size: 10px;
+        }     
+
+        .container {
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .container a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .name {
+            font-size: 5em;
+            margin: 30px 0 0;
+        }
+
+        .intro {
+            font-size: 3em;
+            font-weight: 300;
+        }
+
+        .links {
+            font-size: 1.9em;
+            font-weight: 300;
+        }
+
+        .links a {
+            padding: 0 20px;
+        }
+
+        .sketch img {
+        	width: 100%;
+        }     
+
+        @media (max-width: 650px) {
+            html {
+                font-size: 7px;
+            }
+
+            .container {
+                width: 400px;
+            }
+        }        
+
+        @media (max-width: 450px) {
+            html {
+                font-size: 6px;
+            }
+
+            .container {
+                width: 350px;
+            }
+        }     
+    </style>
+</head>
+<body>
+    <div class="container">
+    	<div>
+			<div id="sketch1" class="sketch" style="display:none;"><img src="./images/sketch.png"></div>
+			<div id="sketch2" class="sketch"><img src="./images/sketch2.png"></div>
+		</div>
+        <div class="name">
+            Joe Flasher
+        </div>
+        <div class="intro">
+            I make awesome things at <a href="http://istrategylabs.com">iStrategyLabs</a>.
+        </div>
+        <div class="links">
+            <a href="https://twitter.com/joseph_flasher"><i class="fa fa-twitter"></i></a> | <a href="http://www.linkedin.com/pub/joe-flasher/8/885/b1b"><i class="fa fa-linkedin"></i></a> |  <a href="http://github.com/jflasher"><i class="fa fa-github"></i></a> | <a href="mailto:joe@joeflasher.com"><i class="fa fa-envelope"></i></a>
+        </div>
+    <div>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+		var sketch1 = $("#sketch1");
+		var sketch2 = $("#sketch2");
+
+		setTimeout(function () { 
+			blink(); 
+		}, 2000);
+
+		function blink() {
+		  	sketch2.hide();
+		  	sketch1.show();
+		  	setTimeout(function () { 
+		  		sketch2.show();
+		  		sketch1.hide();
+		  	}, 300);
+		  	setTimeout(function () {
+		  		blink();
+		  	}, Math.floor(Math.random() * 5000) + 2000);
+		}		
+	</script>
+
+</body>
+</html>
