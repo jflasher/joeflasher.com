@@ -1,18 +1,15 @@
 language: node_js
 node_js:
-  - "0.10"
-
-script: "echo to infinity and beyond!"
-
+- '0.10'
+script: echo to infinity and beyond!
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-
 deploy:
   provider: s3
-  access_key_id: AKIAJOLWV5HPI2CLKW7Q
+  access_key_id: AKIAJVWXC3SN74RLIR7A
   secret_access_key:
-    secure: pYkj+Cx5XIyO8FyQuZIrEuJR14AUUzIH8u8S+EkSDs/xLRSuPWbu8cU00WFxoZegGd/30gs86J3+nRVT+6HU/NBj14ZjNtPI3WN2F9wVT/QvwHiTN+Zwix6gfI+0PYVWRxleg/jL58WleBgZJDAvqfvzG7yNvswjwXuDDX+v95o=
+    secure: qurgpvg84wii/Nh6DQmFepk45olJsmW1RKplBgoW1yJ+G8faAzVetOuLTzqN4F7PRQCuKB3j7vhUiy2x+wPSJO9qeXUE1fE5jJVVpKYNXdw3h0tQL8Wgj+3vXvY05x9/OpFYKWJGGpIP+wMM5G3NW9CGPcMd5knzL2Hc5+gq7KE=
   bucket: joeflasher.com
   acl: public_read
   on:
